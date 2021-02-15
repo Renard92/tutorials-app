@@ -1,0 +1,32 @@
+.app-tutorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 4rem;
+  grid-template-areas:
+    "app-tutorial-header"
+    "app-tutorial-content"
+    "app-tutorial-footer"
+}
+
+.app-tutorial-header {
+  grid-area: app-tutorial-header;
+}
+
+.app-tutorial-content {
+  grid-area: app-tutorial-content;
+}
+
+.app-tutorial-footer {
+  grid-area: app-tutorial-footer;
+}
+
+.app-tutorial-progress-bar {
+  height: 0.5rem;
+}
+
+.app-tutorial-step-image {
+  height: 15rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
