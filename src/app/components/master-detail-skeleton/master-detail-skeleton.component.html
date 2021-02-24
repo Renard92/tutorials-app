@@ -1,0 +1,12 @@
+<div [class.app-master-detail-with-preview-grid]="withPreview"
+     [class.app-master-detail-grid]="!withPreview"
+>
+  <div class="app-master-detail-toolbar rounded">
+  </div>
+  <div class="app-master-detail-list rounded">
+  </div>
+  <div class="app-master-detail-preview rounded" *ngIf="withPreview">
+  </div>
+  <div class="app-master-detail-form rounded">
+  </div>
+</div>

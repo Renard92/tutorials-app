@@ -16,7 +16,10 @@ export class AppComponent implements OnInit {
   public tutorial$: Observable<Tutorial>;
   public tutorials$: Observable<Tutorial[]>;
 
-  constructor(private tutorialService: TutorialService) {
+  constructor(
+    private tutorialService: TutorialService,
+  ) {
+    this.tutorial$ = this.tutorialService.find('how-tutorials-work');
   }
 
   ngOnInit(): void {
@@ -47,12 +50,11 @@ export class AppComponent implements OnInit {
   }
 
   onHowItWorksClick(): void {
-    if (this.sideBarExpanded) {
-      this.sideBarExpanded = false;
-    } else {
-      this.tutorial$ = this.tutorialService.find('how-tutorials-work');
-      this.sideBarExpanded = true;
-    }
+    this.sideBarExpanded = !this.sideBarExpanded;
+  }
+
+  onSelectMenuItem(menuItem): void {
+    this.tutorial$ = this.tutorialService.find(menuItem.tutorialId);
   }
 
 }

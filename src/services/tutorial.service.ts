@@ -115,21 +115,21 @@ export class TutorialService {
         new TutorialStep()
           .withTitle('Ask <span class="text-primary">Eddy Malou</span>, he knows everything')
           .withDescription('Lorem <span class="text-primary">ipsum</span> dolor sit amet, consectetur adipiscing elit. Aliquam quam arcu, ultricies sit.')
-          .withImageSrc('https://images8.alphacoders.com/869/thumb-1920-869819.jpg')
+          .withImageSrc('https://images.alphacoders.com/212/thumbbig-212383.jpg')
           .withSections([
             new TutorialStepSection()
               .withDescription(`Phasellus lectus metus, volutpat sit amet volutpat quis, auctor ut dui. Ut nec rutrum eros. Quisque congue, sem sed aliquam suscipit, sem arcu tristique nunc, eget hendrerit erat nisl ut ante.`)
           ]),
       ]),
     new Tutorial()
-      .withId('how-flows-work')
-      .withTitle(`How flows work`)
+      .withId('how-variables-work')
+      .withTitle(`How variables work`)
       .withCompleted(false)
       .withSteps([
         new TutorialStep()
           .withTitle('Ask <span class="text-primary">Eddy Malou</span>, he knows everything')
           .withDescription('Lorem <span class="text-primary">ipsum</span> dolor sit amet, consectetur adipiscing elit. Aliquam quam arcu, ultricies sit.')
-          .withImageSrc('https://images8.alphacoders.com/869/thumb-1920-869819.jpg')
+          .withImageSrc('https://images3.alphacoders.com/581/thumb-1920-581876.png')
           .withSections([
             new TutorialStepSection()
               .withDescription(`Phasellus lectus metus, volutpat sit amet volutpat quis, auctor ut dui. Ut nec rutrum eros. Quisque congue, sem sed aliquam suscipit, sem arcu tristique nunc, eget hendrerit erat nisl ut ante.`)

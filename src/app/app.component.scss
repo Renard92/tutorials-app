@@ -1,10 +1,10 @@
 .app-layout-grid {
   display: grid;
-  grid-template-columns: 25rem 1fr 30rem;
+  grid-template-columns: 25rem 1fr 30rem 3rem;
   grid-template-rows: 5rem 1fr;
   grid-template-areas:
-    "app-layout-context-bar app-layout-context-bar app-layout-context-bar"
-    "app-layout-menu app-layout-main-content app-layout-side-panel"
+    "app-layout-context-bar app-layout-context-bar app-layout-context-bar app-layout-context-bar"
+    "app-layout-menu app-layout-main-content app-layout-side-panel app-layout-side-bar"
 }
 
 .app-layout-context-bar {
@@ -17,6 +17,10 @@
 
 .app-layout-side-panel {
   grid-area: app-layout-side-panel;
+}
+
+.app-layout-side-bar {
+  grid-area: app-layout-side-bar;
 }
 
 .app-layout-main-content {

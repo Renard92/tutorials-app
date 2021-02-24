@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,19 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  selectedItem = 'Donec gravida elit eget';
-  items: string[] = [
-    'Donec gravida elit eget',
-    'Integer ut quam porta',
-    'Mauris sed risus',
-    'Sed vel dui vitae',
-    'Nam a elit vitae',
-    'Dolor lobortis efficitur',
+  @Output() selectItem = new EventEmitter<any>();
+
+  items = [
+    {
+      route: 'tutorials',
+      text: 'Tutorials',
+      tutorialId: 'how-tutorials-work'
+    },
+    {
+      route: 'variables',
+      text: 'Variables',
+      tutorialId: 'how-variables-work'
+    },
+    {
+      route: 'kpis',
+      text: 'KPIs',
+      tutorialId: 'how-kpis-work'
+    },
   ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelectItem(item): void {
+    this.selectItem.emit(item);
   }
 
 }

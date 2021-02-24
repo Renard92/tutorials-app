@@ -7,7 +7,7 @@
       >
         <i class="bi-building"></i>
         <span>
-          Arasaka
+          OneAston Singapore
         </span>
       </button>
       <button
@@ -28,14 +28,14 @@
       </button>
     </div>
     <div class="d-flex">
-      <div class="dropdown mr-3">
-        <a class="btn btn-lg btn-outline-primary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+      <div class="dropdown">
+        <button  type="button" class="btn btn-lg btn-outline-dark dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
            *ngIf="tutorialsUnlocked"
            [class.active]="tutorialsDropdownExpanded"
            (click)="onToggleTutorials()"
         >
           Tutorials
-        </a>
+        </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" [class.d-inline]="tutorialsDropdownExpanded">
           <a class="dropdown-item" *ngFor="let tutorial of (tutorials$ | async)" (click)="onTutorialClick(tutorial)">
             {{ tutorial.title }}
@@ -43,23 +43,34 @@
           </a>
         </div>
       </div>
-      <button
-        type="button"
-        class="btn btn-lg btn-primary"
-        [class.active]="sideBarExpanded && (tutorial$ | async)?.id === 'how-tutorials-work'"
-        (click)="onHowItWorksClick()"
-      >
-        How it works
+      <button type="button" class="btn btn-lg btn-light ml-3">
+        <i class="bi-grid"></i>
+      </button>
+      <button type="button" class="btn btn-lg btn-light ml-3">
+        <i class="bi-person-circle"></i>
       </button>
     </div>
   </div>
   <div class="app-layout-menu bg-light shadow" *ngIf="menuExpanded">
-    <app-menu></app-menu>
+    <app-menu (selectItem)="onSelectMenuItem($event)"></app-menu>
   </div>
   <div class="app-layout-main-content">
-    <app-main-content></app-main-content>
+    <div class="p-5">
+      <router-outlet></router-outlet>
+    </div>
   </div>
   <div class="app-layout-side-panel shadow" *ngIf="sideBarExpanded">
     <app-tutorial [tutorial]="tutorial$ | async" (gotIt)="onGotIt()" (close)="onToggleSideBar()"></app-tutorial>
+  </div>
+  <div class="app-layout-side-bar bg-light px-2 py-3 shadow">
+    <button
+      type="button"
+      class="btn btn-sm btn-primary"
+      [class.active]="sideBarExpanded"
+      (click)="onHowItWorksClick()"
+      [title]="'Help me'"
+    >
+      <i class="bi-question-circle-fill"></i>
+    </button>
   </div>
 </div>

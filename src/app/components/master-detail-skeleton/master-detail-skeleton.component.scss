@@ -1,0 +1,42 @@
+.app-master-detail-grid {
+  display: grid;
+  grid-gap: 1rem;
+  height: 49rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas:
+    "app-master-detail-toolbar app-master-detail-toolbar"
+    "app-master-detail-list app-master-detail-form"
+}
+
+.app-master-detail-with-preview-grid {
+  display: grid;
+  grid-gap: 1rem;
+  height: 49rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 4rem 1fr 12rem;
+  grid-template-areas:
+    "app-master-detail-toolbar app-master-detail-toolbar"
+    "app-master-detail-list app-master-detail-form"
+    "app-master-detail-preview app-master-detail-form"
+}
+
+.app-master-detail-toolbar {
+  grid-area: app-master-detail-toolbar;
+  background-color: #f4f4f4;
+}
+
+.app-master-detail-list {
+  grid-area: app-master-detail-list;
+  background-color: #eaeaea;
+}
+
+.app-master-detail-preview {
+  grid-area: app-master-detail-preview;
+  background-color: #c0c0c0;
+}
+
+.app-master-detail-form {
+  grid-area: app-master-detail-form;
+  background-color: #cccccc;
+}
