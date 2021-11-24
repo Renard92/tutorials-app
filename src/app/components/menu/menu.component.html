@@ -2,13 +2,13 @@
   <div class="nav flex-column">
     <button
       type="button"
-      class="btn btn-light text-left"
+      class="btn btn-lg btn-light text-left"
       *ngFor="let item of items; let index = index;"
       [routerLink]="item.route"
-      [routerLinkActive]="'active'"
+      [routerLinkActive]="'active font-weight-bold'"
       (click)="onSelectItem(item)"
     >
-      {{ index + 1 }}. {{ item.text }}
+      {{ item.text }}
     </button>
   </div>
 </div>

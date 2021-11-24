@@ -1,0 +1,46 @@
+@import 'grids.variables';
+
+.ema-d-grid {
+  display: -ms-grid !important;
+  display: grid !important;
+}
+
+.ema-grid-gap-xs {
+  grid-gap: $grid-gap-xs;
+}
+
+.ema-grid-gap-sm {
+  grid-gap: $grid-gap-sm;
+}
+
+.ema-grid-gap {
+  grid-gap: $grid-gap;
+}
+
+.ema-grid-gap-lg {
+  grid-gap: $grid-gap-lg;
+}
+
+.ema-grid-gap-xl {
+  grid-gap: $grid-gap-xl;
+}
+
+.ema-grid-gap-1 {
+  grid-gap: $grid-gap * 1;
+}
+
+.ema-grid-gap-2 {
+  grid-gap: $grid-gap * 2;
+}
+
+.ema-grid-gap-3 {
+  grid-gap: $grid-gap * 3;
+}
+
+.ema-grid-gap-4 {
+  grid-gap: $grid-gap * 4;
+}
+
+.ema-grid-gap-5 {
+  grid-gap: $grid-gap * 5;
+}

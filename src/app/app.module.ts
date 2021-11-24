@@ -9,6 +9,7 @@ import { TutorialsComponent } from './components/tutorials/tutorials.component';
 import { VariablesComponent } from './components/variables/variables.component';
 import { KpisComponent } from './components/kpis/kpis.component';
 import { MasterDetailSkeletonComponent } from './components/master-detail-skeleton/master-detail-skeleton.component';
+import { SanitizeUrlPipe } from './pipes/sanitize-url.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MasterDetailSkeletonComponent } from './components/master-detail-skelet
     TutorialsComponent,
     VariablesComponent,
     KpisComponent,
-    MasterDetailSkeletonComponent
+    MasterDetailSkeletonComponent,
+    SanitizeUrlPipe
   ],
   imports: [
     BrowserModule,

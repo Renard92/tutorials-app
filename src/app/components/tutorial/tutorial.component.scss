@@ -16,6 +16,12 @@
   grid-area: app-tutorial-content;
 }
 
+.app-tutorial-content-body {
+  height: 100%;
+  max-height: 470px;
+  overflow-y: auto;
+}
+
 .app-tutorial-footer {
   grid-area: app-tutorial-footer;
 }
@@ -25,8 +31,16 @@
 }
 
 .app-tutorial-step-image {
-  height: 15rem;
+  height: 20rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.app-tutorial-step-video {
+  height: 20rem;
+}
+
+.app-tutorial-step-gif {
+  height: 20rem;
 }

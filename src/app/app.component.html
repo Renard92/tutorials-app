@@ -62,7 +62,7 @@
   <div class="app-layout-side-panel shadow" *ngIf="sideBarExpanded">
     <app-tutorial [tutorial]="tutorial$ | async" (gotIt)="onGotIt()" (close)="onToggleSideBar()"></app-tutorial>
   </div>
-  <div class="app-layout-side-bar bg-light px-2 py-3 shadow">
+  <div class="app-layout-side-bar bg-light px-2 py-3 shadow d-flex align-items-end">
     <button
       type="button"
       class="btn btn-sm btn-primary"

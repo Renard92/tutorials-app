@@ -48,6 +48,32 @@ export class TutorialStep {
     return this;
   }
 
+  get videoSrc(): string {
+    return this._dto.videoSrc;
+  }
+
+  set videoSrc(value: string) {
+    this._dto.videoSrc = value;
+  }
+
+  withVideoSrc(value: string): TutorialStep {
+    this.videoSrc = value;
+    return this;
+  }
+
+  get gifSrc(): string {
+    return this._dto.gifSrc;
+  }
+
+  set gifSrc(value: string) {
+    this._dto.gifSrc = value;
+  }
+
+  withGifSrc(value: string): TutorialStep {
+    this.gifSrc = value;
+    return this;
+  }
+
   get sections(): TutorialStepSection[] {
     return this._sections;
   }
